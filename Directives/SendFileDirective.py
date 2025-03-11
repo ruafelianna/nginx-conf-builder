@@ -1,5 +1,5 @@
-from Directives.DirectiveBase import DirectiveBase
-from Enums.OnOff import OnOff
+from .DirectiveBase import DirectiveBase
+from Enums import OnOff
 
 class SendFileDirective(DirectiveBase):
     def __init__(

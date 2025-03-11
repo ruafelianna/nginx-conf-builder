@@ -1,8 +1,10 @@
-from Directives.DirectiveBase import DirectiveBase
-from Directives.AccessLogDirective import AccessLogDirective
-from Directives.DefaultTypeDirective import DefaultTypeDirective
-from Directives.IncludeDirective import IncludeDirective
-from Directives.SendFileDirective import SendFileDirective
+from Directives import (
+    AccessLogDirective,
+    DefaultTypeDirective,
+    DirectiveBase,
+    IncludeDirective,
+    SendFileDirective,
+)
 
 class HttpContext(DirectiveBase):
     def __init__(

@@ -1,7 +1,9 @@
-from Directives.DirectiveBase import DirectiveBase
-from Directives.MultiAcceptDirective import MultiAcceptDirective
-from Directives.UseDirective import UseDirective
-from Directives.WorkerConnectionsDirective import WorkerConnectionsDirective
+from Directives import (
+    DirectiveBase,
+    MultiAcceptDirective,
+    UseDirective,
+    WorkerConnectionsDirective,
+)
 
 class EventContext(DirectiveBase):
     def __init__(

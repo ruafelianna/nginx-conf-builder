@@ -1,5 +1,5 @@
-from Directives.DirectiveBase import DirectiveBase
-from Enums.EventHandleMethod import EventHandleMethod
+from .DirectiveBase import DirectiveBase
+from Enums import EventHandleMethod
 
 class UseDirective(DirectiveBase):
     def __init__(

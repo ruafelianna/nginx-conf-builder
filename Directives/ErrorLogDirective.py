@@ -1,5 +1,5 @@
-from Enums.LogLevel import LogLevel
-from Directives.DirectiveBase import DirectiveBase
+from .DirectiveBase import DirectiveBase
+from Enums import LogLevel
 
 class ErrorLogDirective(DirectiveBase):
     def __init__(

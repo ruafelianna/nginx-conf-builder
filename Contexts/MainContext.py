@@ -1,10 +1,15 @@
-from Contexts.EventContext import EventContext
-from Contexts.HttpContext import HttpContext
-from Directives.ErrorLogDirective import ErrorLogDirective
-from Directives.DirectiveBase import DirectiveBase
-from Directives.PidDirective import PidDirective
-from Directives.UserDirective import UserDirective
-from Directives.WorkerProcessesDirective import WorkerProcessesDirective
+from . import (
+    EventContext,
+    HttpContext,
+)
+
+from Directives import (
+    DirectiveBase,
+    ErrorLogDirective,
+    PidDirective,
+    UserDirective,
+    WorkerProcessesDirective,
+)
 
 class MainContext(DirectiveBase):
     def __init__(

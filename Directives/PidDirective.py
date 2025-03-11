@@ -1,4 +1,4 @@
-from Directives.DirectiveBase import DirectiveBase
+from .DirectiveBase import DirectiveBase
 
 class PidDirective(DirectiveBase):
     def __init__(
