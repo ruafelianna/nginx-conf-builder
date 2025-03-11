@@ -1,3 +1,5 @@
+from . import ServerContext
+
 from Directives import (
     AccessLogDirective,
     DefaultTypeDirective,
@@ -13,11 +15,13 @@ class HttpContext(DirectiveBase):
         default_type : DefaultTypeDirective = None,
         access_log : AccessLogDirective = None,
         sendfile : SendFileDirective = None,
+        servers : tuple[ServerContext] = (),
     ):
         self.includes = includes
         self.default_type = default_type
         self.access_log = access_log
         self.sendfile = sendfile
+        self.servers = servers
 
         super().__init__(
             "http",
@@ -27,4 +31,5 @@ class HttpContext(DirectiveBase):
                 self.access_log,
                 self.sendfile,
             )
+            + self.servers,
         )
