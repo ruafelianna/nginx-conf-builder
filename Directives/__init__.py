@@ -7,9 +7,11 @@ from .IndexDirective import IndexDirective
 from .ListenDirective import ListenDirective
 from .MultiAcceptDirective import MultiAcceptDirective
 from .PidDirective import PidDirective
+from .ProxyPassDirective import ProxyPassDirective
 from .RootDirective import RootDirective
 from .SendFileDirective import SendFileDirective
 from .ServerNameDirective import ServerNameDirective
+from .TryFilesDirective import TryFilesDirective
 from .UseDirective import UseDirective
 from .UserDirective import UserDirective
 from .WorkerConnectionsDirective import WorkerConnectionsDirective
@@ -25,9 +27,11 @@ __all__ = [
     "ListenDirective",
     "MultiAcceptDirective",
     "PidDirective",
+    "ProxyPassDirective",
     "RootDirective",
     "SendFileDirective",
     "ServerNameDirective",
+    "TryFilesDirective",
     "UseDirective",
     "UserDirective",
     "WorkerConnectionsDirective",

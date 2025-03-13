@@ -1,3 +1,5 @@
+from Contexts import LocationContext
+
 from Directives import (
     DirectiveBase,
     IndexDirective,
@@ -13,6 +15,7 @@ class ServerContext(DirectiveBase):
         index : IndexDirective | None = None,
         root : RootDirective | None = None,
         server_name : ServerNameDirective | None = None,
+        locations : tuple[LocationContext] = (),
     ):
         self.listens = listens
         self.index = index
@@ -27,4 +30,5 @@ class ServerContext(DirectiveBase):
                 self.root,
                 self.index,
             )
+            + locations
         )
