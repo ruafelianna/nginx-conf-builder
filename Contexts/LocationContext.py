@@ -20,9 +20,9 @@ class LocationContext(DirectiveBase):
         self.proxy_pass = proxy_pass
         self.try_files = try_files
 
-        args = []
+        args : list[str] = []
 
-        BuildArgsHelper.add_str(args, modifier.value)
+        BuildArgsHelper.add_enum_value(args, modifier)
         BuildArgsHelper.add_str(args, template)
 
         super().__init__(

@@ -6,9 +6,6 @@ class UseDirective(DirectiveBase):
         self,
         method : EventHandleMethod = EventHandleMethod.select,
     ):
-        if not isinstance(method, EventHandleMethod):
-            raise TypeError("`method` must be a `EventHandleMethod` enum member")
-
         super().__init__(
             "use",
             (method.name,),

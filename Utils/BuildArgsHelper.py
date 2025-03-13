@@ -27,6 +27,14 @@ class BuildArgsHelper:
             args.append(f"{name}={value.name}")
 
     @staticmethod
+    def add_enum_value(
+        args: list[str],
+        enum: Enum | None,
+    ) -> None:
+        if enum is not None:
+            args.append(enum.value)
+
+    @staticmethod
     def add_str(
         args: list[str],
         value: str | None,

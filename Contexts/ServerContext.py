@@ -11,11 +11,11 @@ from Directives import (
 class ServerContext(DirectiveBase):
     def __init__(
         self,
-        listens : tuple[ListenDirective] = (),
+        listens : tuple[ListenDirective, ...] = (),
         index : IndexDirective | None = None,
         root : RootDirective | None = None,
         server_name : ServerNameDirective | None = None,
-        locations : tuple[LocationContext] = (),
+        locations : tuple[LocationContext, ...] = (),
     ):
         self.listens = listens
         self.index = index

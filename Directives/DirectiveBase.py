@@ -2,19 +2,23 @@ from __future__ import annotations
 
 from abc import ABC
 
+from Types import DirectiveDict
+
 class DirectiveBase(ABC):
     def __init__(
         self,
         name : str,
-        args : tuple[str] = (),
-        block : tuple[DirectiveBase | None] = (),
+        args : tuple[str, ...] = (),
+        block : tuple[DirectiveBase | None, ...] = (),
     ):
         self.name = name
         self.args = args
         self.block = block
 
-    def build(self):
-        result = {
+    def build(
+        self,
+    ) -> DirectiveDict:
+        result : DirectiveDict = {
             "directive": self.name,
             "args": self.args,
         }

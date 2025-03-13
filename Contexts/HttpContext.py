@@ -11,11 +11,11 @@ from Directives import (
 class HttpContext(DirectiveBase):
     def __init__(
         self,
-        includes : tuple[IncludeDirective] = (),
-        default_type : DefaultTypeDirective = None,
-        access_log : AccessLogDirective = None,
-        sendfile : SendFileDirective = None,
-        servers : tuple[ServerContext] = (),
+        includes : tuple[IncludeDirective, ...] = (),
+        default_type : DefaultTypeDirective | None = None,
+        access_log : AccessLogDirective | None = None,
+        sendfile : SendFileDirective | None = None,
+        servers : tuple[ServerContext, ...] = (),
     ):
         self.includes = includes
         self.default_type = default_type

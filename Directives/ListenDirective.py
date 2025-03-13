@@ -42,7 +42,7 @@ class ListenDirective(DirectiveBase):
         if so_keepalive and (keepidle or keepintvl or keepcnt):
             raise ValueError("`so_keepalive` on/off value cannot be combined with `keepidle`, `keepintvl` or `keepcnt`")
 
-        args = []
+        args : list[str] = []
 
         if unix_socket:
             BuildArgsHelper.add_str(args, unix_socket)
@@ -83,7 +83,4 @@ class ListenDirective(DirectiveBase):
         keepintvl : str | None = None,
         keepcnt : int | None = None,
     ) -> str:
-        keepidle = BuildArgsHelper.value_or_empty(keepidle)
-        keepintvl = BuildArgsHelper.value_or_empty(keepintvl)
-        keepcnt = BuildArgsHelper.value_or_empty(keepcnt)
-        return f"{keepidle}:{keepintvl}:{keepcnt}"
+        return f"{BuildArgsHelper.value_or_empty(keepidle)}:{BuildArgsHelper.value_or_empty(keepintvl)}:{BuildArgsHelper.value_or_empty(keepcnt)}"

@@ -8,9 +8,9 @@ from Directives import (
 class EventContext(DirectiveBase):
     def __init__(
         self,
-        worker_connections : WorkerConnectionsDirective = None,
-        use : UseDirective = None,
-        multi_accept : MultiAcceptDirective = None,
+        worker_connections : WorkerConnectionsDirective | None = None,
+        use : UseDirective | None = None,
+        multi_accept : MultiAcceptDirective | None = None,
     ):
         self.worker_connections = worker_connections
         self.use = use

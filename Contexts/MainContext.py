@@ -14,12 +14,12 @@ from Directives import (
 class MainContext(DirectiveBase):
     def __init__(
         self,
-        user : UserDirective = None,
-        worker_processes : WorkerProcessesDirective = None,
-        error_log : ErrorLogDirective = None,
-        pid : PidDirective = None,
-        event_ctx : EventContext = None,
-        http_ctx : HttpContext = None,
+        user : UserDirective | None = None,
+        worker_processes : WorkerProcessesDirective | None = None,
+        error_log : ErrorLogDirective | None = None,
+        pid : PidDirective | None = None,
+        event_ctx : EventContext | None = None,
+        http_ctx : HttpContext | None = None,
     ):
         self.user = user
         self.worker_processes = worker_processes
