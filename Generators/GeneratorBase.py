@@ -1,9 +1,8 @@
 from abc import ABC
 from typing import Callable
 
+from Common import DirectiveBase, DirectiveDict
 from Contexts import MainContext
-from Directives import DirectiveBase
-from Types import DirectiveDict
 
 class GeneratorBase(ABC):
     def __init__(

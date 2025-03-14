@@ -1,5 +1,6 @@
+from Common import DirectiveBase
+
 from Directives import (
-    DirectiveBase,
     ProxyPassDirective,
     TryFilesDirective,
 )

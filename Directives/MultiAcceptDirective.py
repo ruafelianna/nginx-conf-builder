@@ -1,10 +1,9 @@
-from .DirectiveBase import DirectiveBase
-from Enums import OnOff
+from Common import DirectiveBase, Enum_OnOff
 
 class MultiAcceptDirective(DirectiveBase):
     def __init__(
         self,
-        on_off : OnOff = OnOff.on,
+        on_off : Enum_OnOff = Enum_OnOff.on,
     ):
         super().__init__(
             "multi_accept",

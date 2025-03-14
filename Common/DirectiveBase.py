@@ -1,15 +1,14 @@
-from __future__ import annotations
-
 from abc import ABC
+from typing import Self
 
-from Types import DirectiveDict
+from .DirectiveDict import DirectiveDict
 
 class DirectiveBase(ABC):
     def __init__(
         self,
         name : str,
         args : tuple[str, ...] = (),
-        block : tuple[DirectiveBase | None, ...] = (),
+        block : tuple[Self | None, ...] = (),
     ):
         self.name = name
         self.args = args

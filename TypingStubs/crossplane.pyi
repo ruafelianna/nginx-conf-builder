@@ -1,3 +1,3 @@
-from Types import DirectiveDict
+from Common import DirectiveDict
 
 def build(payload: tuple[DirectiveDict, ...], indent: int = 4, tabs: bool = False, header: bool = False) -> str: ...

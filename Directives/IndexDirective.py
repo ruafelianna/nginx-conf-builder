@@ -1,4 +1,4 @@
-from .DirectiveBase import DirectiveBase
+from Common import DirectiveBase
 
 class IndexDirective(DirectiveBase):
     def __init__(

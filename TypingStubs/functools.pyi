@@ -1,0 +1,3 @@
+from enum import Enum
+
+def total_ordering[TEnum : Enum](cls : type[TEnum]) -> type[TEnum]: ...

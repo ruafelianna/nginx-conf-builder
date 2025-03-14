@@ -1,7 +1,7 @@
+from Common import DirectiveBase
 from Contexts import LocationContext
 
 from Directives import (
-    DirectiveBase,
     IndexDirective,
     ListenDirective,
     RootDirective,

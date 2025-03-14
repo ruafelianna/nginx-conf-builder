@@ -3,8 +3,9 @@ from . import (
     HttpContext,
 )
 
+from Common import DirectiveBase
+
 from Directives import (
-    DirectiveBase,
     ErrorLogDirective,
     PidDirective,
     UserDirective,

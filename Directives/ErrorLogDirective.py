@@ -1,4 +1,4 @@
-from .DirectiveBase import DirectiveBase
+from Common import DirectiveBase
 from Enums import LogLevel
 
 class ErrorLogDirective(DirectiveBase):

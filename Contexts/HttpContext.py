@@ -1,9 +1,9 @@
 from . import ServerContext
+from Common import DirectiveBase
 
 from Directives import (
     AccessLogDirective,
     DefaultTypeDirective,
-    DirectiveBase,
     IncludeDirective,
     SendFileDirective,
 )

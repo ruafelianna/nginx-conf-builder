@@ -1,5 +1,5 @@
-from .DirectiveBase import DirectiveBase
-from Enums import ListenAcceptFilter, OnOff
+from Common import DirectiveBase, Enum_OnOff
+from Enums import ListenAcceptFilter
 from Utils import BuildArgsHelper
 
 class ListenDirective(DirectiveBase):
@@ -20,9 +20,9 @@ class ListenDirective(DirectiveBase):
         accept_filter : ListenAcceptFilter | None = None,
         deferred : bool = False,
         bind : bool = False,
-        ipv6only : OnOff | None = None,
+        ipv6only : Enum_OnOff | None = None,
         reuseport : bool = False,
-        so_keepalive : OnOff | None = None,
+        so_keepalive : Enum_OnOff | None = None,
         keepidle : str | None = None,
         keepintvl : str | None = None,
         keepcnt : int | None = None,

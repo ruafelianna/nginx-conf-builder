@@ -1,6 +1,5 @@
 from .AccessLogDirective import AccessLogDirective
 from .DefaultTypeDirective import DefaultTypeDirective
-from .DirectiveBase import DirectiveBase
 from .ErrorLogDirective import ErrorLogDirective
 from .IncludeDirective import IncludeDirective
 from .IndexDirective import IndexDirective
@@ -20,7 +19,6 @@ from .WorkerProcessesDirective import WorkerProcessesDirective
 __all__ = [
     "AccessLogDirective",
     "DefaultTypeDirective",
-    "DirectiveBase",
     "ErrorLogDirective",
     "IncludeDirective",
     "IndexDirective",

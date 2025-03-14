@@ -1,5 +1,6 @@
+from Common import DirectiveBase
+
 from Directives import (
-    DirectiveBase,
     MultiAcceptDirective,
     UseDirective,
     WorkerConnectionsDirective,
